@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@400;500&display=swap');
+:root{
+	--color-green-primary: #669933;
+	--color-yellow: #fdc215;
+	--color-white-1: #f1f1f1;
+	--color-black-1: #0a0a0a;
+	--color-black-2: #2d2d2d;
+	--color-black-3: #262626;
+	--color-pink-1: #F751A7;
+	--color-red-1: #ff0000;
+	--color-grey-1: #808080;
+	--font-roboto-2: 'Roboto Condensed', sans-serif;
+}
+
+body{
+	color: #2d2d2d;
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.6;
+	font-weight: 300;
+	font-size: 14px;
+}
+
+img{
+	display: block;
+}
+ul{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+a:hover{
+	color: inherit;
+}
+h5{
+	font-size: 1.125em;
+	text-rendering: optimizeSpeed;
+	overflow-wrap: break-word;
+	line-height: 1.6;
+}
+/* fontfamily */
+.font-roboto-2{
+	font-family: var(--font-roboto-2);
+}
+
+/* background color */
+.bg-primary-green{
+	background-color: var(--color-green-primary);
+}
+.bg-black-1{
+	background-color: var(--color-black-1);
+}
+.bg-yellow{
+	background-color: var(--color-yellow);
+}
+/* fontsize */
+.fs-12{
+	font-size: 12px;
+}
+.fs-14{
+	font-size: 14px;
+}
+.fs-15{
+	font-size: 15px;
+}
+.fs-16{
+	font-size: 16px;
+}
+.fs-18{
+	font-size: 18px;
+}
+.fs-20{
+	font-size: 20px;
+}
+.fs-24{
+	font-size: 24px;
+}
+.fs-27{
+	font-size: 27px;
+}
+.fs-30{
+	font-size: 30px;
+}
+/* color */
+.text-pink-1{
+	color: var(--color-pink-1);
+}
+.text-red-1{
+	color: var(--color-red-1);
+}
+.text-grey-1{
+	color: var(--color-grey-1);
+}
+.text-black{
+	color: black;
+}
+.text-black-1{
+	color: var(--color-black-1);
+}
+.text-black-2{
+	color: var(--color-black-2);
+}
+.text-black-3{
+	color: var(--color-black-3);
+}
+.text-green-primary{
+	color: var(--color-green-primary);
+}
+
+/* fontweight */
+.fw-600{
+	font-weight: 600;
+}
+.fw-700{
+	font-weight: 700;
+}
+/*border*/
+.border-green{
+	border: 1px solid var(--color-green-primary);
+}
+.border-yellow{
+	border: 1px solid var(--color-yellow);
+}
+.col-6-cus{
+	flex: 0 0 auto;
+	width: 48%;
+}
+@media (min-width: 768px){
+	body{
+		font-size: 16px;
+	}
+	.col-md-12-cus{
+		flex: 0 0 auto;
+		width: 100%;
+	}
+
+	.fs-md-24{
+		font-size: 24px;
+	}
+	.col-md-4-cus{
+		flex: 0 0 auto;
+		width: 32.333%;
+	}
+}
+
+@media (min-width: 992px){
+	.fs-lg-24{
+		font-size: 24px;
+	}
+	.col-lg-3-cus{
+		flex: 0 0 auto;
+		width: 23%;
+	}
+	.col-lg-2-cus{
+		flex: 0 0 auto;
+		width: 18%;
+	}
+}
