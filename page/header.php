@@ -71,22 +71,34 @@
 		background-color: var(--color-green-primary);
 		color: white;
 	}
-/*	0ffcanvas mobile*/
 
-.header-bottom-offcanvas > button i:before{
-	font-size: 24px;
-	font-weight: 600 !important;
-}
-.header-bottom-offcanvas .offcanvas-backdrop{
-	background-color: #669933;
-}
-.header-bottom-offcanvas .offcanvas-backdrop.show{
-	opacity: 0.85;
-}
-.header-bottom-offcanvas .offcanvas-top{
-	height: 100vh;
-}
 
+	/*	0ffcanvas mobile*/
+
+	.header-bottom-offcanvas > button i:before{
+		font-size: 24px;
+		font-weight: 600 !important;
+	}
+	.header-bottom-offcanvas .offcanvas-backdrop{
+		background-color: #669933;
+	}
+	.header-bottom-offcanvas .offcanvas-backdrop.show{
+		opacity: 0.85;
+	}
+	.header-bottom-offcanvas .offcanvas-top{
+		height: 100vh;
+	}
+	.header-dropdown-mobile{
+		max-height: 0;
+		overflow: hidden;
+		opacity: 0;
+		transition: all 0.3s ease-in;
+	}
+	.btn-header-dropdown{
+		background-color: transparent;
+		transition: 0.3s ease-in;
+		left: 75%;
+	}
 @media (min-width: 768px){
 	.logo-header{
 		width: 196px;
@@ -154,7 +166,7 @@
 						</button>
 					</form>
 
-					<ul class="mb-0 px-0 d-flex flex-column gap-4 text-black font-roboto-2 fs-24 fw-600">
+					<ul class="mb-0 px-0 d-flex flex-column gap-3 text-black font-roboto-2 fs-24 fw-600">
 						<li class="text-center">
 							<a href="index.php" class="py-3">Trang chủ</a>
 						</li>
@@ -163,11 +175,40 @@
 								Giới thiệu
 							</a>
 						</li>
-						<li class="text-center">
+						<li class="text-center position-relative">
 							<a href="index.php?page=cuahang" class="py-3">
 								Cửa hàng #Halona
-								<i class="bi bi-chevron-down"></i>
 							</a>
+							<button class="border-0 text-white btn-header-dropdown position-absolute top-0 " >
+								<i class="bi bi-chevron-down"></i>
+							</button>
+							<ul class="mb-0 ps-0 fs-20 fw-normal header-dropdown-mobile d-flex align-items-center flex-column">
+								<li>
+									<a href="" class="px-3 py-2 d-inline-block w-100">
+										Trái cây nội địa
+									</a>
+								</li>
+								<li>
+									<a href="" class="px-3 py-2 d-inline-block w-100">
+										Trái cây nhập khẩu
+									</a>
+								</li>
+								<li>
+									<a href="" class="px-3 py-2 d-inline-block w-100">
+										Các loại hạt dinh dưỡng
+									</a>
+								</li>
+								<li>
+									<a href="" class="px-3 py-2 d-inline-block w-100">
+										Các loại rau củ quả Oragnic
+									</a>
+								</li>
+								<li>
+									<a href="" class="px-3 py-2 d-inline-block w-100">
+										Nước ép
+									</a>
+								</li>
+							</ul>
 						</li>
 						<li class="text-center">
 							<a href="index.php?page=lamdep" class="py-3">
@@ -314,5 +355,26 @@
 	    } else{
 	    	$('.header-bottom-nav-link a[href="index.php"]').addClass("active")
 	    }
+
+	    $(".btn-header-dropdown").click(function(){
+	    	const checkDropdownMobile = $(".header-dropdown-mobile").css("max-height") == "0px"
+	    	if(checkDropdownMobile){
+	    		$(this).css({"rotate" : "180deg"})
+	    		$(".header-dropdown-mobile").css({
+		    		"max-height" : "300px",
+		    		"overflow" : "visible",
+		    		"opacity" : "1"
+		    	})
+		    	$(".header-dropdown-mobile").addClass("mt-2")
+	    	} else{
+	    		$(this).css({"rotate" : ""})
+	    		$(".header-dropdown-mobile").css({
+		    		"max-height" : "",
+		    		"overflow" : "",
+		    		"opacity" : ""
+		    	})
+		    	$(".header-dropdown-mobile").removeClass("mt-2")
+	    	}
+	    })
 	})
 </script>

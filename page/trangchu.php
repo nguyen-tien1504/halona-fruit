@@ -164,7 +164,6 @@
 	}
 
 	.form-news > *:not(p, button){
-		font-size: 15px;
 	    box-shadow: 0px 0px;
 	    background: #fffdf1;
 	    border: 1px solid var(--color-yellow);
